@@ -21,10 +21,11 @@ class HealthViewComposer
 
     public function compose(View $view)
     {
+        // disabled horizon health banner for vapor
         $view->with([
-            'horizonActive' => $this->horizonStatus->is(HorizonStatus::STATUS_ACTIVE),
+            'horizonActive' => true, //$this->horizonStatus->is(HorizonStatus::STATUS_ACTIVE),
             'mailConfigurationValid' => $this->mailConfiguration->isValid(),
-            'queueConfig' => config('queue.connections.mailcoach-redis') && ! empty(config('queue.connections.mailcoach-redis')),
+            'queueConfig' => config('queue.connections.mailcoach-redis') && !empty(config('queue.connections.mailcoach-redis')),
         ]);
     }
 }
