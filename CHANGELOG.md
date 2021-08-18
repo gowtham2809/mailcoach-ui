@@ -2,6 +2,14 @@
 
 All notable changes to `mailcoach-ui` will be documented in this file
 
+## 4.0.10 - 2021-08-03
+
+- Change boot order for config (#8)
+
+## 4.0.9 - 2021-05-19
+
+- Fix a typo on the API keys screen
+
 ## 4.0.8 - 2021-04-23
 
 - fix links to docs
